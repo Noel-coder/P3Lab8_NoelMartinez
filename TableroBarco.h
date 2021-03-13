@@ -2,6 +2,8 @@
 #define TABLEROBARCO_H
 #include "Movimiento.h"
 #include "Tablero.h"
+#include <iostream>
+using namespace std;
 
 class TableroBarco : public Tablero
 {

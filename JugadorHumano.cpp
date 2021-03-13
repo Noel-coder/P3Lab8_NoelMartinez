@@ -24,109 +24,157 @@ void JugadorHumano::ColocarBarcos(TableroBarco* tableroBarcos) {
 	cout << "Posicion de sus barcos, Ingrese [1] Horizontalmente o [2] Verticalmente: "<<endl;
 	cin>>posicion;
 	if(posicion==1) {
-		int direccionX,direccionY;
+		int direccionX,i,direccionY,contador;
 		cout << "Primero ingresamos nuestro (Aircraft Carrier) "<<endl;
 		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje X (Horizontal): "<<endl;
 		cin >> direccionX;
 		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje Y (Vertical): "<<endl;
 		cin>> direccionY;
 		direccionX = validacionTamano(5,direccionX);
-		for(int i=direccionX; i < 10; i++) {
+		i=direccionX;
+		contador=0;		
+		while(contador<5) {
 			tableroBarcos->celdas[direccionY][i]='A';
+			i++;
+			contador++;
 		}
+		tableroBarcos->imprimir();
 		//Segundo Barco
 		cout << "Ahora ingresamos nuestro segundo barco el (Battleship) " <<endl;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje X (Horizontal): "<<endl;
+		cout << "Ingrese donde desea colocar su Battleship en el eje X (Horizontal): "<<endl;
 		cin >> direccionX;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje Y (Vertical): "<<endl;
+		cout << "Ingrese donde desea colocar su Battleship en el eje Y (Vertical): "<<endl;
 		cin>> direccionY;
 		direccionX = validacionTamano(4,direccionX);
-		for(int i=direccionX; i < 10; i++) {
+		i=direccionX;
+		contador=0;		
+		while(contador<4) {
 			tableroBarcos->celdas[direccionY][i]='B';
+			i++;
+			contador++;
 		}
+		tableroBarcos->imprimir();
 		//Tercer Barco
 		cout << "Ahora vamos con nuestro tercer barco el (Cruiser) "<<endl;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje X (Horizontal): "<<endl;
+		cout << "Ingrese donde desea colocar su Cruiser en el eje X (Horizontal): "<<endl;
 		cin >> direccionX;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje Y (Vertical): "<<endl;
+		cout << "Ingrese donde desea colocar su Cruiser en el eje Y (Vertical): "<<endl;
 		cin>> direccionY;
 		direccionX = validacionTamano(3,direccionX);
-		for(int i=direccionX; i < 10; i++) {
+		i=direccionX;
+		contador=0;		
+		while(contador<3) {
 			tableroBarcos->celdas[direccionY][i]='C';
+			i++;
+			contador++;
 		}
+		tableroBarcos->imprimir();
 		//Cuarto Barco
 		cout << "Continuemos ingresando el cuarto barco el (Submarine) "<<endl;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje X (Horizontal): "<<endl;
+		cout << "Ingrese donde desea colocar su Submarine en el eje X (Horizontal): "<<endl;
 		cin >> direccionX;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje Y (Vertical): "<<endl;
+		cout << "Ingrese donde desea colocar su Submarine en el eje Y (Vertical): "<<endl;
 		cin>> direccionY;
 		direccionX = validacionTamano(3,direccionX);
-		for(int i=direccionX; i < 10; i++) {
+		i=direccionX;
+		contador=0;		
+		while(contador<3) {
 			tableroBarcos->celdas[direccionY][i]='S';
+			i++;
+			contador++;
 		}
+		tableroBarcos->imprimir();
 		//Quinto Barco
 		cout << "Por ultimo ingresemos nuestro barco (Destroyer) "<<endl;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje X (Horizontal): "<<endl;
+		cout << "Ingrese donde desea colocar su Destroyer en el eje X (Horizontal): "<<endl;
 		cin >> direccionX;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje Y (Vertical): "<<endl;
+		cout << "Ingrese donde desea colocar su Destroyer en el eje Y (Vertical): "<<endl;
 		cin>> direccionY;
 		direccionX = validacionTamano(2,direccionX);
-		for(int i=direccionX; i < 10; i++) {
+		i=direccionX;
+		contador=0;		
+		while(contador<2) {
 			tableroBarcos->celdas[direccionY][i]='D';
+			i++;
+			contador++;
 		}
-		
-		
+		tableroBarcos->imprimir();
+	
 	} else {
-		int direccionX,direccionY;
+		//verticalmente
+		int direccionX,direccionY,i,contador;
 		cout << "Primero ingresamos nuestro (Aircraft Carrier) "<<endl;
 		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje X (Horizontal): "<<endl;
 		cin >> direccionX;
 		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje Y (Vertical): "<<endl;
 		cin>> direccionY;
 		direccionX = validacionTamano(5,direccionX);
-		for(int i=direccionX; i < 10; i++) {
-			tableroBarcos->celdas[i][direccionX]='A';
+		i=direccionX;
+		contador=0;
+		while(contador<5) {
+			tableroBarcos->celdas[direccionX][direccionY]='A';
+			cout<<"Impresion de i:"<<i<<" "<<"Impresion de direccion X:"<<direccionX<<endl;
+			direccionX++;
+			contador++;
 		}
+		tableroBarcos->imprimir();
 		//Segundo Barco
 		cout << "Ahora ingresamos nuestro segundo barco el (Battleship) " <<endl;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje X (Horizontal): "<<endl;
+		cout << "Ingrese donde desea colocar su Battleship en el eje X (Horizontal): "<<endl;
 		cin >> direccionX;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje Y (Vertical): "<<endl;
+		cout << "Ingrese donde desea colocar su Battleship en el eje Y (Vertical): "<<endl;
 		cin>> direccionY;
 		direccionX = validacionTamano(4,direccionX);
-		for(int i=direccionX; i < 10; i++) {
-			tableroBarcos->celdas[i][direccionX]='B';
+		contador=0;
+		while(contador<4){
+			cout<<"Impresion de i:"<<i<<" "<<"Impresion de direccion X:"<<direccionX<<endl;
+			tableroBarcos->celdas[direccionX][direccionY]='B';
+			direccionX++;
+			contador++;                       
 		}
+		tableroBarcos->imprimir();
 		//Tercer Barco
 		cout << "Ahora vamos con nuestro tercer barco el (Cruiser) "<<endl;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje X (Horizontal): "<<endl;
+		cout << "Ingrese donde desea colocar su Cruiser en el eje X (Horizontal): "<<endl;
 		cin >> direccionX;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje Y (Vertical): "<<endl;
+		cout << "Ingrese donde desea colocar su Cruiser en el eje Y (Vertical): "<<endl;
 		cin>> direccionY;
 		direccionX = validacionTamano(3,direccionX);
-		for(int i=direccionX; i < 10; i++) {
-			tableroBarcos->celdas[i][direccionX]='C';
+		contador=0;
+		while(contador<3) {
+			tableroBarcos->celdas[direccionX][direccionY]='C';
+			direccionX++;
+			contador++;
 		}
+		tableroBarcos->imprimir();
 		//Cuarto Barco
 		cout << "Continuemos ingresando el cuarto barco el (Submarine) "<<endl;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje X (Horizontal): "<<endl;
+		cout << "Ingrese donde desea colocar su Submarine en el eje X (Horizontal): "<<endl;
 		cin >> direccionX;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje Y (Vertical): "<<endl;
+		cout << "Ingrese donde desea colocar su Submarine en el eje Y (Vertical): "<<endl;
 		cin>> direccionY;
 		direccionX = validacionTamano(3,direccionX);
-		for(int i=direccionX; i < 10; i++) {
-			tableroBarcos->celdas[i][direccionX]='S';
+		contador=0;
+		while(contador<3) {
+			tableroBarcos->celdas[direccionX][direccionY]='S';
+			direccionX++;
+			contador++;
 		}
+		tableroBarcos->imprimir();
 		//Quinto Barco
 		cout << "Por ultimo ingresemos nuestro barco (Destroyer) "<<endl;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje X (Horizontal): "<<endl;
+		cout << "Ingrese donde desea colocar su Destroyer en el eje X (Horizontal): "<<endl;
 		cin >> direccionX;
-		cout << "Ingrese donde desea colocar su Aircraft Carrier en el eje Y (Vertical): "<<endl;
+		cout << "Ingrese donde desea colocar su Destroyer en el eje Y (Vertical): "<<endl;
 		cin>> direccionY;
 		direccionX = validacionTamano(2,direccionX);
-		for(int i=direccionX; i < 10; i++) {
-			tableroBarcos->celdas[i][direccionX]='D';
+		contador=0;
+		while(contador<2) {
+			tableroBarcos->celdas[direccionX][direccionY]='D';
+			direccionX++;
+			contador++;
 		}
+		tableroBarcos->imprimir();
 	}
 
 
