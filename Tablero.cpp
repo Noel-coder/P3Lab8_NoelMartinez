@@ -8,6 +8,3 @@ Tablero::~Tablero()
 {
 }
 
-void imprimir(){
-	
-}

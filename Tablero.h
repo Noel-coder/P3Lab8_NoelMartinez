@@ -1,15 +1,21 @@
 #ifndef TABLERO_H
 #define TABLERO_H
 #include <vector>
+using namespace std;
+class JugadorHumano;
+class JugadorPC;
+class Juego;
 
-class Tablero
-{
-	private:
+class Tablero {
+		friend class JugadorHumano;
+		friend class JugadorPC;
+		friend class Juego;
+	protected:
 		vector<vector<char>>celdas;
 	public:
 		Tablero();
 		~Tablero();
-		void imprimir()=0;
+		virtual void imprimir()=0;
 };
 
 #endif

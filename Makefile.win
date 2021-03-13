@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o
-LINKOBJ  = main.o
+OBJ      = main.o Movimiento.o Tablero.o TableroAtaque.o TableroBarco.o Jugador.o JugadorPC.o JugadorHumano.o Juego.o
+LINKOBJ  = main.o Movimiento.o Tablero.o TableroAtaque.o TableroBarco.o Jugador.o JugadorPC.o JugadorHumano.o Juego.o
 LIBS     = -L"D:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"D:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"D:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"D:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
 CXXINCS  = -I"D:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"D:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"D:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
@@ -26,3 +26,27 @@ $(BIN): $(OBJ)
 
 main.o: main.cpp
 	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Movimiento.o: Movimiento.cpp
+	$(CPP) -c Movimiento.cpp -o Movimiento.o $(CXXFLAGS)
+
+Tablero.o: Tablero.cpp
+	$(CPP) -c Tablero.cpp -o Tablero.o $(CXXFLAGS)
+
+TableroAtaque.o: TableroAtaque.cpp
+	$(CPP) -c TableroAtaque.cpp -o TableroAtaque.o $(CXXFLAGS)
+
+TableroBarco.o: TableroBarco.cpp
+	$(CPP) -c TableroBarco.cpp -o TableroBarco.o $(CXXFLAGS)
+
+Jugador.o: Jugador.cpp
+	$(CPP) -c Jugador.cpp -o Jugador.o $(CXXFLAGS)
+
+JugadorPC.o: JugadorPC.cpp
+	$(CPP) -c JugadorPC.cpp -o JugadorPC.o $(CXXFLAGS)
+
+JugadorHumano.o: JugadorHumano.cpp
+	$(CPP) -c JugadorHumano.cpp -o JugadorHumano.o $(CXXFLAGS)
+
+Juego.o: Juego.cpp
+	$(CPP) -c Juego.cpp -o Juego.o $(CXXFLAGS)

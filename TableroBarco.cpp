@@ -1,9 +1,14 @@
 #include "TableroBarco.h"
 
-TableroBarco::TableroBarco()
+TableroBarco::TableroBarco():Tablero()
 {
 }
 
 TableroBarco::~TableroBarco()
 {
+}
+
+
+void TableroBarco::imprimir(){
+	
 }

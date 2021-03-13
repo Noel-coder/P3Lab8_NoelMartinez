@@ -5,12 +5,10 @@
 
 class TableroAtaque : public Tablero
 {
-	private:
-		
 	public:
 		TableroAtaque();
 		~TableroAtaque();
-		void imprimir();
+		virtual void imprimir();
 		bool ValidarMovimiento(Movimiento);
 		void AplicarMovimiento(Movimiento);
 		bool VerificarVictoria();

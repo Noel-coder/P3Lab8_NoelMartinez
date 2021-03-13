@@ -7,3 +7,7 @@ TableroAtaque::TableroAtaque()
 TableroAtaque::~TableroAtaque()
 {
 }
+
+void TableroAtaque::imprimir(){
+	
+}

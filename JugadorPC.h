@@ -1,17 +1,16 @@
 #ifndef JUGADORPC_H
 #define JUGADORPC_H
-
+#include "TableroBarco.h"
+#include "TableroAtaque.h"
 #include "Jugador.h"
 
 class JugadorPC : public Jugador
 {
-	private:
-		
 	public:
 		JugadorPC();
 		~JugadorPC();
-		Movimiento jugar(TableroAtaque*);
-		void ColocarBarcos(TableroBarco*);
+		virtual Movimiento jugar(TableroAtaque*);
+		virtual void ColocarBarcos(TableroBarco*);
 };
 
 #endif

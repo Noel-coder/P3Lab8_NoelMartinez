@@ -1,7 +1,9 @@
 #ifndef JUEGO_H
 #define JUEGO_H
-#include "TableroBarcos.h"
+#include "TableroBarco.h"
 #include "TableroAtaque.h"
+#include "JugadorHumano.h"
+#include "JugadorPC.h"
 #include "Jugador.h"
 
 class Juego

@@ -9,7 +9,12 @@ class Movimiento
 	public:
 		Movimiento();
 		~Movimiento();
+		Movimiento(int,int);
 		void imprimir();
+		int getAtaqueFila();
+		int getAtaqueColumna();
+		void setAtaqueFila(int);
+		void setAtaqueColumna(int);
+		
 };
-
 #endif
