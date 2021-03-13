@@ -42,12 +42,13 @@ void Juego::PrepararJuego() {
 			cout<< "Ingrese el nombre del jugardor Desafiante: "<<endl;
 			cin>>jugador1;
 			cout<< "Nombre de la Maquina: Haaland"<<endl;
+			jugador2="Haaland";
 			cout<<"Le toca colocar los barcos a: "<<jugador1<<" "<<endl;
 			jugadores[0] = new JugadorHumano(jugador1);
 			jugadores[0]->ColocarBarcos(tableroBarcos[0]);
 			tableroBarcos[0]->imprimir();
 			cout<<"Ahora toca colocar los barcos a: "<<"Haaland"<<" "<<endl;
-			jugadores[1]=new JugadorPC();
+			jugadores[1]=new JugadorPC(jugador2);
 			jugadores[1]->ColocarBarcos(tableroBarcos[1]);
 			tableroBarcos[1]->imprimir();
 			break;

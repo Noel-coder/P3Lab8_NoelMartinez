@@ -12,7 +12,7 @@ using namespace std;
 class JugadorPC : public Jugador
 {
 	public:
-		JugadorPC();
+		JugadorPC(string);
 		~JugadorPC();
 		int validacionTamano(int,int);
 		virtual Movimiento jugar(TableroAtaque*);
